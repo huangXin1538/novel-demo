@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel='stylesheet' href='/stylesheets/mui.min.css' />
+    <link rel='stylesheet' href='/stylesheets/book.css' />
+    <script src="/javascripts/jquery-1.12.4.min.js"></script>
+    <script src="/javascripts/mui.min.js"></script>
+    <script src="/javascripts/chapter.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <button style="position: absolute;top: 0;left: 0;height: 100%;" onclick="history.go(-1)">返回</button>
+    <h1 id="title" class="mui-title">希染小说</h1>
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <%= result.title %>
+        </li>
+        <li class="mui-table-view-cell" style="line-height: 30px;padding-bottom: 80px">
+            <%= result.content %>
+        </li>
+        <li class="mui-table-view-cell" style="position: fixed;bottom: 0;border-top: 1px solid #000;background-color: #fff;width: 100%;">
+            <button class="before" data-link=<%= result.before %>>上一章</button>
+            <button class="catalog" data-catalog=<%= result.catalog %>>目录</button>
+            <button class="after" data-after=<%= result.after %>>下一章</button>
+        </li>
+    </ul>
+</div>
+</body>
+<body>

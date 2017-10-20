@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel='stylesheet' href='/stylesheets/mui.min.css' />
+    <link rel='stylesheet' href='/stylesheets/book.css' />
+    <script src="/javascripts/jquery-1.12.4.min.js"></script>
+    <script src="/javascripts/mui.min.js"></script>
+    <script src="/javascripts/book.js"></script>
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <button style="position: absolute;top: 0;left: 0;height: 100%;">返回</button>
+    <h1 id="title" class="mui-title"><%= result.title %></h1>
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <%= result.author %>
+        </li>
+        <li class="mui-table-view-cell">
+            <%= result.lasttime %>
+        </li>
+        <li class="mui-table-view-cell">
+            <%= result.lastchapters %>
+        </li>
+        <li class="mui-table-view-cell">
+            <div>本书简介</div>
+            <%= result.desc %>
+        </li>
+    </ul>
+    <ul class="mui-table-view"  style="margin-top: 10px">
+        <li class="mui-table-view-cell">
+           最近9章
+        </li>
+        <% result.list.forEach(function(item){%>
+        <li class="mui-table-view-cell chapter">
+            <a class="mui-navigate-right " data-link=<%= item.href %>>
+                <%= item.text %>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+    <ul class="mui-table-view allchapter" style="margin-top: 10px">
+        <li class="mui-table-view-cell">
+            全部章节（每页10章节）
+        </li>
+
+
+    </ul>
+    <div>
+            <p class="pages"></p>
+            <button class="before">上一页</button>
+            <button class="after">下一页</button>
+            <button class="last">尾页</button>
+
+    </div>
+    <div class="input" style="display: inline-block">
+        <input type="text" class="num">
+    </div>
+    <button class="to">跳转</button>
+</div>
+</body>
+<body>

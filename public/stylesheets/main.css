@@ -1,0 +1,24 @@
+.title{
+    color: black;
+    font-size: 17px;
+}.searchBTN{
+     display: inline-block;
+     position: absolute;
+     right: 10px;
+     top: 0;
+ }.mui-placeholder{
+      width: 70%;
+      margin-left: 10px;
+  }.mui-search input[type=search]{
+       display: inline-block;
+       width: 70%;
+
+   }.mui-input-row{
+        margin-top: 10px;
+        margin-left: 10px;
+    }.mui-navigate-right:after, .mui-push-left:after, .mui-push-right:after{
+         display: none;
+     }.mui-icon.mui-icon-clear{
+          position: relative !important;
+          top: 0 !important;
+      }
